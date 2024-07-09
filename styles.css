@@ -1,0 +1,71 @@
+body {
+    font-family: PingFangSC-Semibold, 苹方-简, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 2em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2em;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.project-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 所有行都居中对齐 */
+    align-content: flex-start; /* 让所有项目从顶部开始对齐 */
+}
+
+.project {
+    border: 1px solid #ddd;
+    margin: 1em;
+    padding: 1em;
+    width: 300px;
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in forwards; /* 应用动画 */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
