@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: PingFangSC-Semibold, 苹方-简, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,7 +19,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 1em;
+    margin: 0 2em;
 }
 
 nav ul li a {
@@ -38,7 +38,8 @@ h1, h2, h3 {
 .project-board {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* 所有行都居中对齐 */
+    align-content: flex-start; /* 让所有项目从顶部开始对齐 */
 }
 
 .project {
@@ -46,6 +47,8 @@ h1, h2, h3 {
     margin: 1em;
     padding: 1em;
     width: 300px;
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in forwards; /* 应用动画 */
 }
 
 footer {
@@ -56,4 +59,13 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
